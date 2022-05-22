@@ -33,6 +33,10 @@
                 string OutputFile = Console.ReadLine();
                 Console.WriteLine("View {0} for game results", OutputFile);
             }
+        else 
+            {
+                Console.WriteLine("Validating Input");
+            }
 
     }
 }
