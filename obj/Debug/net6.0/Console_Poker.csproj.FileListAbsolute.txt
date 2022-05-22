@@ -1,0 +1,15 @@
+/Users/hannah/Documents/GitHub/Console_Poker/bin/Debug/net6.0/Console_Poker
+/Users/hannah/Documents/GitHub/Console_Poker/bin/Debug/net6.0/Console_Poker.deps.json
+/Users/hannah/Documents/GitHub/Console_Poker/bin/Debug/net6.0/Console_Poker.runtimeconfig.json
+/Users/hannah/Documents/GitHub/Console_Poker/bin/Debug/net6.0/Console_Poker.dll
+/Users/hannah/Documents/GitHub/Console_Poker/bin/Debug/net6.0/Console_Poker.pdb
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.csproj.AssemblyReference.cache
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.AssemblyInfoInputs.cache
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.AssemblyInfo.cs
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.csproj.CoreCompileInputs.cache
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.dll
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/refint/Console_Poker.dll
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.pdb
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/Console_Poker.genruntimeconfig.cache
+/Users/hannah/Documents/GitHub/Console_Poker/obj/Debug/net6.0/ref/Console_Poker.dll
