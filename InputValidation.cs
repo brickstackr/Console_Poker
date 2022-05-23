@@ -33,5 +33,6 @@ namespace ConsolePoker
         return Name;
     }
 }
+
     }
 }
