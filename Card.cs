@@ -1,6 +1,7 @@
 namespace ConsolePoker
 {
 using System;
+using System.Collections;
 					
 public class CardHandling
 {
@@ -15,8 +16,9 @@ public class CardHandling
 			this.suit=suit;
 		}
 	}
-    struct HandOfCards
+    class HandOfCards : IEnumerator
     {
+        int position = -1;
         public Card Card1;
         public Card Card2;
 
@@ -26,10 +28,37 @@ public class CardHandling
 
         public Card Card5;
 
-    //    public void Hand_Set(Card Card1, Card Card2, Card Card3, Card Card4, Card Card5);
-	//	{
-    //        get { return HandFromDealer; }
-    //    }
+        public bool MoveNext()
+        {
+            position++;
+            return (position < 5);
+        }
+
+        public void Reset()
+        {
+            position = -1;
+        }
+
+        object IEnumerator.Current
+        {
+            get
+            {
+                return Current;
+            }
+        public Card Current
+        {
+            get
+            {
+                try
+                {
+                    return this.Card1;
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+    }
     }
 	HandOfCards DealCards()
 	{
@@ -62,29 +91,9 @@ public class CardHandling
 				Deck[i] = Deck[j];
 				Deck[j] = Deck[i];
 			}
-			
-			for(i=0;i<9;i++)
-			{
-				if (i<2) 
-				{
-					Console.Write("Player 1:");
-					Player_1[i] = Deck[i];
-					Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
-				}
-					else if(i<4)
-					{
-						Console.Write("Player 2:");
-						Player_2[i-2] = Deck[i];
-						Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
-					}
-						else 
-						{
-							Console.Write("Table:");
-							Table[i-4] = Deck[i];
-							Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
-						}
-			}
-		
-    }	
+			return new HandOfCards {
+                new Card1(Deck[i].value, Deck[i].suit)
+            }
     }	
 	}
+}
