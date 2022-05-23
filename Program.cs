@@ -1,4 +1,5 @@
-﻿class ConsolePrompts
+﻿namespace ConsolePoker {
+    class ConsolePrompts
 {
     static void Main()
     {
@@ -26,7 +27,7 @@
                 else 
                     Console.WriteLine("Invalid Selection.Try again");
 
-                    }
+        }
         if (ConsoleOutput == false)
             {
                 Console.WriteLine("Enter an output file in txt format");
@@ -37,7 +38,18 @@
             {
                 Console.WriteLine("Validating Input");
             }
+        // Each poker player name is only valid if it contains alphanumeric characters (spaces are also allowed). 
+        //  Any other characters or symbols found on the input line makes the name invalid
+        string[] InputArray = System.IO.File.ReadAllLines(InputFile);
+        foreach (string line in InputArray)
+        {
+            // Validate input
+            if(InputValidation.InputIsValid(line))
+                new InputValidation.Player(line);
+            else
+                Console.WriteLine("invalid input");
+        }
+
 
     }
-}
-
+}}
