@@ -45,7 +45,10 @@
         {
             // Validate input
             if(InputValidation.InputIsValid(line))
+                {
                 new InputValidation.Player(line);
+                Console.WriteLine(line + " is joining the table");
+                }
             else
                 Console.WriteLine("invalid input");
         }
