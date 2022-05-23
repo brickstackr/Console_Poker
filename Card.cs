@@ -60,7 +60,7 @@ public class CardHandling
             }
     }
     }
-	string DealCards()
+	static public string DealCards()
 	{
 		Card []Deck = new Card [52];
 		Card t;

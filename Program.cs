@@ -1,6 +1,6 @@
 ﻿namespace ConsolePoker
 {
-    partial class ConsolePrompts
+    class ConsolePrompts
 {
     static void Main()
     {
@@ -62,22 +62,7 @@
             Console.WriteLine("The game is ready to begin");
         else
             Console.WriteLine("There is no one to join the poker table");
-    }
-    Card2 []Deck = new Card2 [52];
-    Card2? t;
-    int i, j, n=0;
-    string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","D","K","A"};
-    string [] s = new string[4] {"h", "d", "c", "s"};
-    
-    Card2 []Player_1 = new Card2[2];
-    Card2 []Player_2 = new Card2[2];
-    Random rand = new Random();
+        Console.WriteLine("testing deal cards");
 
-    for(i = 0; i<4;i++)
-        for(j = 0; j <13;j++)
-            {
-            Deck[n].Card2_Set(v[j],s[i]);
-            n++;
-             }
-		
-}
+        string CardTest = CardHandling.DealCards();
+    }}}
