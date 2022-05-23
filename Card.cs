@@ -44,7 +44,7 @@ public class CardHandling
             get
             {
                 return Current;
-            }
+            }}
         public Card Current
         {
             get
@@ -60,7 +60,7 @@ public class CardHandling
             }
     }
     }
-	HandOfCards DealCards()
+	string DealCards()
 	{
 		Card []Deck = new Card [52];
 		Card t;
@@ -68,11 +68,11 @@ public class CardHandling
 		string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","D","K","A"};
 		string [] s = new string[4] {"h", "d", "c", "s"};
 		
-		Card []Card1 = new Card[2];
-        Card []Card2 = new Card[2];
-        Card []Card3 = new Card[2];
-        Card []Card4 = new Card[2];
-        Card []Card5 = new Card[2];
+//		Card []Card1 = new Card[2];
+//        Card []Card2 = new Card[2];
+//        Card []Card3 = new Card[2];
+//        Card []Card4 = new Card[2];
+//        Card []Card5 = new Card[2];
 		
 		Random rand = new Random();
 		
@@ -91,9 +91,9 @@ public class CardHandling
 				Deck[i] = Deck[j];
 				Deck[j] = Deck[i];
 			}
-			return new HandOfCards {
-                new Card1(Deck[i].value, Deck[i].suit)
-            }
-    }	
-	}
-}
+            string TempString = Deck[i].value;
+            string TempString2 = Deck[i].suit;
+            Card []Player_1 = new Card[5];
+            return(TempString + TempString2);
+
+}}}
