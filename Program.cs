@@ -41,13 +41,16 @@
         // Each poker player name is only valid if it contains alphanumeric characters (spaces are also allowed). 
         //  Any other characters or symbols found on the input line makes the name invalid
         string[] InputArray = System.IO.File.ReadAllLines(InputFile);
+        // table size- increment up for each valid input
         int table = 0;
+        var PokerTable = new List<string>();
         foreach (string line in InputArray)
         {
             // Validate input
             if(InputValidation.InputIsValid(line))
                 {
-                new InputValidation.Player(line);
+              //  new InputValidation.Player(line);
+                PokerTable.Add(line);
                 Console.WriteLine(line + " is joining the table");
                 table++;
                 }
@@ -58,7 +61,10 @@
             Console.WriteLine("The game is ready to begin");
         else
             Console.WriteLine("There is no one to join the poker table");
-
+        // create array with index of table size 
+        Person[] peopleArray = new Person[table];
+        foreach (string GamePlayer in PokerTable)
+            new Person(GamePlayer);
 
     }
 }}
