@@ -15,8 +15,23 @@ public class CardHandling
 			this.suit=suit;
 		}
 	}
-	
-	public static void DealCards()
+    struct HandOfCards
+    {
+        public Card Card1;
+        public Card Card2;
+
+        public Card Card3;
+
+        public Card Card4;
+
+        public Card Card5;
+
+    //    public void Hand_Set(Card Card1, Card Card2, Card Card3, Card Card4, Card Card5);
+	//	{
+    //        get { return HandFromDealer; }
+    //    }
+    }
+	HandOfCards DealCards()
 	{
 		Card []Deck = new Card [52];
 		Card t;
@@ -24,10 +39,11 @@ public class CardHandling
 		string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","D","K","A"};
 		string [] s = new string[4] {"h", "d", "c", "s"};
 		
-		Card []Player_1 = new Card[2];
-		Card []Player_2 = new Card[2];
-		Card []Table = new Card[5];
-		Card []Searching = new Card[7];
+		Card []Card1 = new Card[2];
+        Card []Card2 = new Card[2];
+        Card []Card3 = new Card[2];
+        Card []Card4 = new Card[2];
+        Card []Card5 = new Card[2];
 		
 		Random rand = new Random();
 		
