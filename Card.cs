@@ -65,8 +65,8 @@ public class CardHandling
 		Card []Deck = new Card [52];
 		Card t;
 		int i, j, n=0;
-		string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","D","K","A"};
-		string [] s = new string[4] {"h", "d", "c", "s"};
+		string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+		string [] s = new string[4] {"H", "D", "C", "S"};
 		
 		Random rand = new Random();
 
