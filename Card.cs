@@ -68,16 +68,9 @@ public class CardHandling
 		string [] v = new string[13] {"2","3","4","5","6","7","8","9","10","J","D","K","A"};
 		string [] s = new string[4] {"h", "d", "c", "s"};
 		
-//		Card []Card1 = new Card[2];
-//        Card []Card2 = new Card[2];
-//        Card []Card3 = new Card[2];
-//        Card []Card4 = new Card[2];
-//        Card []Card5 = new Card[2];
-		
 		Random rand = new Random();
-		
 
-			for(i = 0; i<4;i++)
+		for(i = 0; i<4;i++)
 				for(j = 0; j <13;j++)
 				{
 					Deck[n].Card_Set(v[j],s[i]);
@@ -91,9 +84,30 @@ public class CardHandling
 				Deck[i] = Deck[j];
 				Deck[j] = Deck[i];
 			}
-            string TempString = Deck[i].value;
-            string TempString2 = Deck[i].suit;
-            Card []Player_1 = new Card[5];
-            return(TempString + TempString2);
-
+			
+			for(i=0;i<9;i++)
+			{
+				if (i<2) 
+				{
+					return Deck[i].value + Deck[i].suit;
+                    //Console.Write("Player 1:");
+					//Player_1[i] = Deck[i];
+					//Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
+				}
+					else if(i<4)
+					{
+                        return Deck[i].value + Deck[i].suit;
+						//Console.Write("Player 2:");
+						//Player_2[i-2] = Deck[i];
+						//Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
+					}
+						else 
+						{
+                            return Deck[i].value + Deck[i].suit;
+							//Console.Write("Table:");
+							//Table[i-4] = Deck[i];
+							//Console.WriteLine(" {0}{1}", Deck[i].value, Deck[i].suit);
+						}
+			}
+            return "00";
 }}}

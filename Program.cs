@@ -64,5 +64,7 @@
             Console.WriteLine("There is no one to join the poker table");
         Console.WriteLine("testing deal cards");
 
-        string CardTest = CardHandling.DealCards();
+            string v = CardHandling.DealCards();
+            string CardTest = v;
+        Console.WriteLine(CardTest);
     }}}
