@@ -62,9 +62,21 @@
             Console.WriteLine("The game is ready to begin");
         else
             Console.WriteLine("There is no one to join the poker table");
-        Console.WriteLine("testing deal cards");
+        //Console.WriteLine("testing deal cards");
 
-            string v = CardHandling.DealCards();
-            string CardTest = v;
-        Console.WriteLine(CardTest);
+        //    string v = CardHandling.DealCards();
+        //    string CardTest = v;
+        foreach(string player in PokerTable)
+        {
+            Stack<string> theStack = new Stack<string>();
+            for (int number = 0; number <= 5; number++)
+                    {
+                        string v = CardHandling.DealCards();
+                        string CardTest = v;
+                        theStack.Push(v);
+                    }
+            Console.WriteLine("Player hand" + theStack);
+
+        }
+        //Console.WriteLine(CardTest);
     }}}
