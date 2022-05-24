@@ -68,14 +68,15 @@
         //    string CardTest = v;
         foreach(string player in PokerTable)
         {
+            Console.WriteLine("Player hand for: " + player);
             Stack<string> theStack = new Stack<string>();
-            for (int number = 0; number <= 5; number++)
+            for (int number = 0; number <= 4; number++)
                     {
                         string v = CardHandling.DealCards();
                         string CardTest = v;
                         theStack.Push(v);
+                        Console.WriteLine(v);
                     }
-            Console.WriteLine("Player hand" + theStack);
 
         }
         //Console.WriteLine(CardTest);
